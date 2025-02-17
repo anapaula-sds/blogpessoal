@@ -1,26 +1,35 @@
-import { Link } from "react-router-dom"
-
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
+import { useContext } from "react";
+ 
 function Navbar() {
-    return (
-        <>
-            <div className='w-full flex justify-center py-8
+  const navigate = useNavigate();
+  const { handleLogout } = useContext(AuthContext);
+ 
+  function logout() {
+    handleLogout();
+    alert("Usuario deslogado com sucesso");
+    navigate("/");
+  }
+  return (
+    <div className='w-full flex justify-center py-8
                 bg-lime-400 text-black'>
-            
-                <div className="container flex justify-between text-lg">
-                    <Link to='/home' className="text-2xl font-bold hover:shadow-xl hover:shadow-black transition-shadow duration-500">Blog Pessoal</Link>
-
-                    <div className='flex gap-4'>
-                        <Link to='' className="text-black font-bold text-lg hover:scale-110 transition-transform duration-300">Postagens</Link>
-                        <Link to='' className="text-black font-bold text-lg hover:scale-110 transition-transform duration-300">Temas</Link>
-                        <Link to='' className="text-black font-bold text-lg hover:scale-110 transition-transform duration-300">Cadastrar tema</Link>
-                        <Link to='' className="text-black font-bold text-lg hover:scale-110 transition-transform duration-300">Perfil</Link>
-                        <Link to='login' className="text-black font-bold text-lg hover:scale-110 transition-transform duration-300">Sair</Link>
-                        
-                    </div>
-                </div>
-            </div>
-        </>
-    )
+      <div className="container py-4 flex justify-between max-sm:justify-center">
+        <div className="text-xl font-semibold">
+          <Link to="/home"> Blog pessoal</Link>
+        </div>
+        <nav className="flex gap-2 max-sm:hidden">
+          <Link to="/">Postagens </Link>
+          <Link to="/">Temas </Link>
+          <Link to="/">Cadastrar tema </Link>
+          <Link to="/">Perfil </Link>
+          <Link to="" onClick={logout} className="hover:underline">
+            Sair
+          </Link>
+        </nav>
+      </div>
+    </div>
+  );
 }
-
-export default Navbar
+ 
+export default Navbar;
