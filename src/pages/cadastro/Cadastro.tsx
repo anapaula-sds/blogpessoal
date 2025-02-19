@@ -149,15 +149,17 @@ function Cadastro() {
                            hover:bg-indigo-900 w-1/2 py-2
                            flex justify-center' 
                 >
-                   {isLoading ? <RotatingLines
-                    strokeColor="white"
-                    strokeWidth="5"
-                    animationDuration="0.75"
-                    width="24"
-                    visible={true}
-                  /> :
+                   {isLoading ? (
+                    <RotatingLines
+                      strokeColor="white"
+                      strokeWidth="5"
+                      animationDuration="0.75"
+                      width="24"
+                      visible={true}
+                  /> 
+                   ) : (
                     <span>Cadastrar</span>
-                  }
+                  )}
               
             </button>
           </div>

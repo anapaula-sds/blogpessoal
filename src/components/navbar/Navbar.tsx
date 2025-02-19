@@ -13,15 +13,15 @@ function Navbar() {
   }
   return (
     <div className='w-full flex justify-center py-8
-                bg-lime-400 text-black'>
+                bg-gradient-to-r from-[#FFD6E0] via-[#FFB6C1] via-20% to-[#FFD700]
+ text-black'>
       <div className="container py-4 flex justify-between max-sm:justify-center">
         <div className="text-xl font-semibold">
           <Link to="/home"> Blog pessoal</Link>
         </div>
         <nav className="flex gap-2 max-sm:hidden">
-          <Link to="/">Postagens </Link>
-          <Link to="/">Temas </Link>
-          <Link to="/">Cadastrar tema </Link>
+          <Link to='/temas' className='hover:underline'>Temas</Link>
+          <Link to='/cadastrartema' className='hover:underline'>Cadastrar tema</Link>
           <Link to="/">Perfil </Link>
           <Link to="" onClick={logout} className="hover:underline">
             Sair
