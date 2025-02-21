@@ -1,5 +1,9 @@
+import ListaPostagens from "../../components/postagens/listapostagens/ListaPostagens"
+import ModalPostagem from "../../components/postagens/modalpostagem/ModalPostagem"
+
 function Home() {
     return (
+        <>
         <div className="flex 
                         justify-center 
                         bg-[#FFF8E7]
@@ -32,7 +36,7 @@ function Home() {
                         <div className="rounded border-amber-900 border-solid border-2 py-2 px-4 text-[#B8860B]  
                 transition duration-300 ease-in-out 
                 hover:bg-red-300 hover:text-[#5A3E2B] cursor-pointer">
-                            Nova Postagem
+                            <ModalPostagem />
                         </div>
                     </div>
                 </div>
@@ -47,6 +51,8 @@ function Home() {
                 </div>
             </div>
         </div>
+        <ListaPostagens />
+        </>
     )
 }
  

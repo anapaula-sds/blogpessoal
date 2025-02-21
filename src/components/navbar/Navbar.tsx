@@ -19,7 +19,9 @@ function Navbar() {
         <div className="text-xl font-semibold">
           <Link to="/home"> Blog pessoal</Link>
         </div>
+        
         <nav className="flex gap-2 max-sm:hidden">
+          <Link to='/postagens' className='hover:underline'>Postagens</Link>
           <Link to='/temas' className='hover:underline'>Temas</Link>
           <Link to='/cadastrartema' className='hover:underline'>Cadastrar tema</Link>
           <Link to="/">Perfil </Link>
