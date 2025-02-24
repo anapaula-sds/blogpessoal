@@ -4,6 +4,7 @@ import { ChangeEvent, FormEvent, useEffect, useState } from 'react'
 import Usuario from '../../models/Usuario'
 import { cadastrarUsuario } from '../../services/Service'
 import { RotatingLines } from 'react-loader-spinner'
+import { ToastAlerta } from '../../utils/ToastAlerta'
 
 function Cadastro() {
 
@@ -52,14 +53,14 @@ function Cadastro() {
       try{
 
         await cadastrarUsuario('/usuarios/cadastrar', usuario, setUsuario)
-        alert('Usuário Cadastrado com Sucesso!')
+        ToastAlerta('Usuário Cadastrado com Sucesso!', 'success')
 
       }catch(error){
-        alert('Erro ao Cadastrar o Usuario!')
+        ToastAlerta('Erro ao Cadastrar o Usuario!', 'error')
       }
 
     }else{
-      alert('Dados do usuário Inconsistente vErifique as informações e tente novament')
+      ToastAlerta('Dados do usuário Inconsistente vErifique as informações e tente novament', 'error')
       setUsuario({...usuario, senha: ''})
       setConfirmarSenha('')
     }

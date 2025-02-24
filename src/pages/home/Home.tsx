@@ -26,7 +26,7 @@ function Home() {
                         Seja Bem Vindo ao Meu <br /> Blog Pessoal!
                     </h2>
                     <p className="text-xl text-[#905D5D] text-center">
-                        Cadastre-se para postar suas ideias, pensamentos, acompanhar e interagir <br /> com as Postagens de outros usuários com !
+                        Cadastre-se para postar suas ideias, pensamentos, acompanhar e interagir <br /> com as Postagens de outros usuários!
                     </p>
 
                     <div className="flex

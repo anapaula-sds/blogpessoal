@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 const images = [
+  "https://i.imgur.com/V4sPprW.jpg",
   "https://i.imgur.com/NAZhhaz.jpg",
   "https://i.imgur.com/LWyvB2M.jpg",
   "https://i.imgur.com/WsTzYU5.jpg",
