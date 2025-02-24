@@ -22,12 +22,11 @@ function Home() {
                     <h2 className="text-5xl
                                     font-bold
                                     text-[#905D5D]
-                                    ">
-                        Seja Bem Vindo!
+                                    text-center">
+                        Seja Bem Vindo ao Meu <br /> Blog Pessoal!
                     </h2>
-                    <p className="text-xl text-[#905D5D]">
-                        Expresse aqui seus pensamentos e
-                        opiniões
+                    <p className="text-xl text-[#905D5D] text-center">
+                        Cadastre-se para postar suas ideias, pensamentos, acompanhar e interagir <br /> com as Postagens de outros usuários com !
                     </p>
 
                     <div className="flex
